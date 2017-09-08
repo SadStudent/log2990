@@ -12,10 +12,10 @@ export class BasicService {
 
   private url = 'http://localhost:3000/basic';
 
-  public basicGet(): Promise<Message> {
+  public basicGet(): Promise<Message<string>> {
     return this.http.get(this.url)
     .toPromise()
-    .then(response => response.json() as Message)
+    .then(response => response.json() as Message<string>)
     .catch(this.handleError);
   }
 

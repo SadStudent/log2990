@@ -1,4 +1,4 @@
-export class Message{
+export class Message<T> {
     public title : string;
-    public body : string;
+    public body : T;
 }
