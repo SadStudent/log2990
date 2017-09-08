@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CubeComponent } from './cube/cube.component';
 import { PasswordFormComponent } from './admin/auth/password-form.component';
 import { AdminComponent } from './admin/admin.component';
+import { PageGrilleComponent } from './mots-croise/page-grille.component';
 
 import { RenderService } from './cube/render.service';
 import { BasicService } from './basic.service';
@@ -19,7 +20,8 @@ import { AuthService } from './admin/auth/auth.service';
     AppComponent,
     CubeComponent,
     PasswordFormComponent,
-    AdminComponent
+    AdminComponent,
+    PageGrilleComponent
   ],
   imports: [
     BrowserModule,
