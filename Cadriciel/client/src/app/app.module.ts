@@ -8,8 +8,10 @@ import { AppComponent } from './app.component';
 import { CubeComponent } from './cube/cube.component';
 import { PasswordFormComponent } from './admin/auth/password-form.component';
 import { AdminComponent } from './admin/admin.component';
-import { PageGrilleComponent } from './mots-croise/page-grille.component';
 import { ChangePasswordComponent } from './admin/change-password.component';
+import { CrosswordComponent } from './crossword/crossword.component';
+import { GridComponent } from './crossword/grid.component';
+
 
 import { RenderService } from './cube/render.service';
 import { BasicService } from './basic.service';
@@ -22,8 +24,9 @@ import { AuthService } from './admin/auth/auth.service';
     CubeComponent,
     PasswordFormComponent,
     AdminComponent,
-    PageGrilleComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    CrosswordComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
