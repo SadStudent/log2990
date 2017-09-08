@@ -9,7 +9,7 @@ import {RenderService} from './render.service';
 })
 
 export class CubeComponent implements AfterViewInit {
-  requiresPermission: boolean = true;
+  //requiresPermission: boolean = true;
 
   constructor(private renderService: RenderService) {
   }
