@@ -1,7 +1,10 @@
 <h1>{{title}}</h1>
 <div *ngIf="isAdminModule && !isAdmin">
-    <app-password-form-component (success)="onSuccess()"></app-password-form-component>
+    <app-password-form-component (success)="connect()"></app-password-form-component>
 </div>
 <div *ngIf="!isAdminModule || isAdmin">
+    <div *ngIf="isAdmin">
+        <p>Connecté (<a routerLink="/password">Changer le mot de passe</a> | <a (click)="disconnect()">Se déconnecter</a>)</p>
+    </div>
     <router-outlet (activate)='onActivate($event)'></router-outlet>
 </div>

@@ -83,6 +83,9 @@ export class Application {
     //auth service
     router.post('/auth', index.auth.bind(index.auth));
 
+    //change password
+    router.put('/change-password', index.changePassword.bind(index.changePassword))
+
     // use router middleware
     this.app.use(router);
 

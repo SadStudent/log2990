@@ -20,7 +20,11 @@ export class AppComponent implements OnInit {
     console.log(this.isAdminModule?'admin requis':'module pour tout le monde');
   }
 
-  private onSuccess(): void {
+  private connect(): void {
     this.isAdmin = true;
+  }
+
+  private disconnect(): void {
+    this.isAdmin = false;
   }
 }
