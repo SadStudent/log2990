@@ -2,7 +2,7 @@ import * as express from 'express';
 
 import {Message} from '../../../commun/communication/message';
 
-const MONGO_URL: string = "mongodb://localhost:27017/course_automobile";
+const MONGO_URL: string = "mongodb://LOG2990-08:Tx94hx31@parapluie.info.polymtl.ca:27017/LOG2990-08-db";
 
 module Route {
 
