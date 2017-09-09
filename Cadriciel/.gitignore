@@ -1,2 +1,5 @@
 #ignoring .vscode folder but we keep some files for debuging
 /.vscode/chrome
+
+#ignoring npm-debug.log
+/npm-debug.log
