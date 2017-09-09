@@ -34,7 +34,7 @@ export class ChangePasswordComponent implements OnInit {
 
     onSuccess(isOk:boolean): void {
         if(isOk) {
-            alert("Le mot de passe à été changé");
+            alert("Le mot de passe a été changé");
             this.goBack();
         }
         else {

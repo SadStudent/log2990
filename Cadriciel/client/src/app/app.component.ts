@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from './admin/auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  isAdmin: boolean = false;
   isAdminModule: boolean = false;
 
-  constructor () { }
+  constructor (private authService: AuthService) { }
 
   public title = 'LOG2990';
 
@@ -17,14 +17,5 @@ export class AppComponent implements OnInit {
 
   private onActivate(event): void {
     this.isAdminModule = event.requiresPermission;
-    console.log(this.isAdminModule?'admin requis':'module pour tout le monde');
-  }
-
-  private connect(): void {
-    this.isAdmin = true;
-  }
-
-  private disconnect(): void {
-    this.isAdmin = false;
   }
 }

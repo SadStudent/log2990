@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule }     from './app-routing.module';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { CubeComponent } from './cube/cube.component';
 import { PasswordFormComponent } from './admin/auth/password-form.component';
 import { AdminComponent } from './admin/admin.component';
@@ -21,6 +23,7 @@ import { AuthService } from './admin/auth/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
     CubeComponent,
     PasswordFormComponent,
     AdminComponent,
@@ -32,7 +35,8 @@ import { AuthService } from './admin/auth/auth.service';
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [
     RenderService,

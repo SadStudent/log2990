@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+        <a class="navbar-brand" routerLink="/">{{title}}</a>
+        </div>
+        <ul class="nav navbar-nav">
+        <li><a routerLink="/">Accueil</a></li>
+        <li *ngIf="!authService.isAdmin"><a routerLink="/">Course automobile</a></li>
+        <li *ngIf="authService.isAdmin" dropdown>
+            <a href dropdownToggle (click)="false" data-toggle="dropdown">
+                Course automobile<span class="caret"></span>
+            </a>
+            <ul *dropdownMenu class="dropdown-menu">
+                <li><a routerLink="/">Jouer</a></li>
+                <li><a routerLink="/admin">Administration</a></li>
+            </ul>
+        </li>
+        <li><a routerLink="/crossword">Mots croisés</a></li>
+        </ul>
+        <ul *ngIf="authService.isAdmin" class="nav navbar-nav navbar-right">
+        <li><a routerLink="/password"><span class="glyphicon glyphicon-user"></span> Changer le mot de passe</a></li>
+        <li><a href (click)="authService.disconnect(); false"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>
+        </ul>
+    </div>
+</nav>

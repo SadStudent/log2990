@@ -23,7 +23,7 @@ export class PasswordFormComponent implements OnInit {
 
     private validatePassword(): void {
         this.error = false;
-        this.authService.authenticate(this.password).then(isOk => this.grantAccess(isOk));
+        this.authService.connect(this.password).then(isOk => this.grantAccess(isOk));
     }
 
     private grantAccess(isValid: boolean): void {
